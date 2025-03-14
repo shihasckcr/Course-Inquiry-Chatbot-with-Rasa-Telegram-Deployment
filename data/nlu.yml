@@ -1,0 +1,71 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey
+    - Good morning
+    - Good evening
+    - What's up?
+    - Hi there
+    - Greetings
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Talk to you soon
+    - I'm leaving now
+    - Catch you later
+
+- intent: ask_courses
+  examples: |
+    - What courses do you offer?
+    - Tell me about your courses.
+    - Do you have any AI courses?
+    - What kind of training programs are available?
+    - What subjects do you teach?
+    - I'm looking for a course in AI.
+    - Do you provide coding classes?
+    - Are there any software development courses?
+
+- intent: choose_course  
+  examples: |
+    - I am interested in [Data Science](course)
+    - Tell me about [Flutter](course)
+    - Describe [Python Django](course)
+    - Explain [Mearn stack](course)
+    - How is [Asp.net](course) course
+    - [Software Testing](course) syllabus
+    - Is [Robotics](course) good?
+    - How about [Java](course)
+    - Can you explain the [AI](course) course?
+    - I'd like to know more about [Python Django](course)
+    - What are the details of [Machine Learning](course)?
+
+- intent: ask_who
+  examples: |
+    - What are you?
+    - Are you a bot?
+    - Bot
+    - Are you human?
+    - What can you do?
+    - Are you an AI assistant?
+
+- intent: anything_else
+  examples: |
+    - Ok
+    - Okay
+    - Allright
+    - Sounds good
+    - Great
+    - Sure
+    - Thank you
+    - Thanks
+    - Contact 
+    - Information
+    - Number
+    - Connect

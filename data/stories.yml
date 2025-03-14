@@ -1,0 +1,81 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: greet and ask course
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_courses
+  - action: utter_about_courses
+
+- story: Dynamic Course Inquiry
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_courses
+  - action: utter_about_courses
+  - intent: choose_course
+  - action: action_course_info
+  - intent: anything_else
+  - action: utter_contact_info
+
+- story: Direct Course Inquiry
+  steps:
+  - intent: choose_course
+  - action: action_course_info
+  - intent: anything_else
+  - action: utter_contact_info
+
+- story: Course Inquiry (Fallback)
+  steps:
+  - intent: choose_course
+  - action: action_course_info
+  - intent: anything_else
+  - action: utter_contact_info
+
+- story: Course info with Contact detals
+  steps: 
+  - intent: choose_course
+  - action: action_course_info
+  - intent: anything_else
+  - action: utter_contact_info
+
+- story: greet and ask_who
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_who
+  - action: utter_who
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
